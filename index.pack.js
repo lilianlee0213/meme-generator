@@ -510,6 +510,9 @@ function Header() {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
 exports.default = Meme;
 
 var _react = __webpack_require__(1);
@@ -523,11 +526,16 @@ var _memesData2 = _interopRequireDefault(_memesData);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Meme() {
+	var _useState = (0, _react.useState)(''),
+	    _useState2 = _slicedToArray(_useState, 2),
+	    memeImage = _useState2[0],
+	    setMemeImage = _useState2[1];
+
 	function getMemeImage() {
 		var memesArray = _memesData2.default.data.memes;
 		var randomNumbner = Math.floor(Math.random() * memesArray.length);
 		var url = memesArray[randomNumbner].url;
-		console.log(url);
+		setMemeImage(url);
 	}
 	var onSubmit = function onSubmit(e) {
 		e.preventDefault();
@@ -545,6 +553,11 @@ function Meme() {
 				{ className: 'form--button', onClick: getMemeImage },
 				'Get a new meme image'
 			)
+		),
+		_react2.default.createElement(
+			'div',
+			null,
+			_react2.default.createElement('img', { src: memeImage, alt: '' })
 		)
 	);
 }
