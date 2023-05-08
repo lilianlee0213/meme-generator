@@ -52,3 +52,31 @@ input {
 	background: linear-gradient(90.31deg, #711f8d 1.14%, #a818da 100%);
 	cursor: pointer;
 }
+.meme {
+	position: relative;
+	max-width: 550px;
+	margin: 0 auto;
+}
+.meme-image {
+	max-width: 100%;
+	border-radius: 3px;
+}
+.meme--text {
+	position: absolute;
+	left: 50%;
+	width: 80%;
+	transform: translate(-50%);
+	margin: 15px auto;
+	padding: 0 5px;
+	font-size: 2em;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	letter-spacing: 1px;
+}
+.bottom {
+	bottom: 0;
+}
+.top {
+	top: 0;
+}
