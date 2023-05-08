@@ -391,31 +391,15 @@ if (process.env.NODE_ENV === 'production') {
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
-exports.default = App;
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Header = __webpack_require__(6);
-
-var _Header2 = _interopRequireDefault(_Header);
-
-var _Meme = __webpack_require__(7);
-
-var _Meme2 = _interopRequireDefault(_Meme);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+exports["default"] = App;
+var _react = _interopRequireDefault(__webpack_require__(1));
+var _Header = _interopRequireDefault(__webpack_require__(6));
+var _Meme = _interopRequireDefault(__webpack_require__(7));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function App() {
-	return _react2.default.createElement(
-		'div',
-		null,
-		_react2.default.createElement(_Header2.default, null),
-		_react2.default.createElement(_Meme2.default, null)
-	);
+  return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement(_Header["default"], null), /*#__PURE__*/_react["default"].createElement(_Meme["default"], null));
 }
 
 /***/ }),
@@ -472,40 +456,121 @@ if (process.env.NODE_ENV === 'production') {
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
-exports.default = Header;
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+exports["default"] = Header;
+var _react = _interopRequireDefault(__webpack_require__(1));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function Header() {
-	return _react2.default.createElement(
-		"header",
-		{ className: "header" },
-		_react2.default.createElement("img", { src: "./images/troll-face.png", className: "header--image" }),
-		_react2.default.createElement(
-			"h2",
-			{ className: "header--title" },
-			"Meme Generator"
-		),
-		_react2.default.createElement(
-			"h4",
-			{ className: "header--project" },
-			"React Course - Project 3"
-		)
-	);
+  return /*#__PURE__*/_react["default"].createElement("header", {
+    className: "header"
+  }, /*#__PURE__*/_react["default"].createElement("img", {
+    src: "./images/troll-face.png",
+    className: "header--image"
+  }), /*#__PURE__*/_react["default"].createElement("h2", {
+    className: "header--title"
+  }, "Meme Generator"), /*#__PURE__*/_react["default"].createElement("h4", {
+    className: "header--project"
+  }, "React Course - Project 3"));
 }
 
 /***/ }),
 /* 7 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-throw new Error("Module build failed: SyntaxError: Unexpected token (17:3)\n\n\u001b[0m \u001b[90m 15 | \u001b[39m\t\t\u001b[36mconst\u001b[39m url \u001b[33m=\u001b[39m memesArray[randomNumber]\u001b[33m.\u001b[39murl\u001b[33m;\u001b[39m\n \u001b[90m 16 | \u001b[39m\t\tsetMeme((prevMeme) \u001b[33m=>\u001b[39m ({\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 | \u001b[39m\t\t\t\u001b[33m...\u001b[39mprevMeme\u001b[33m,\u001b[39m\n \u001b[90m    | \u001b[39m\t\t\t\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 18 | \u001b[39m\t\t\trandomImage\u001b[33m:\u001b[39m url\u001b[33m,\u001b[39m\n \u001b[90m 19 | \u001b[39m\t\t}))\u001b[33m;\u001b[39m\n \u001b[90m 20 | \u001b[39m\t}\u001b[0m\n");
+
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = Meme;
+var _react = _interopRequireWildcard(__webpack_require__(1));
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function Meme() {
+  var _useState = (0, _react.useState)({
+      topText: '',
+      bottomText: '',
+      randomImage: 'https://i.imgflip.com/30b1gx.jpg'
+    }),
+    _useState2 = _slicedToArray(_useState, 2),
+    meme = _useState2[0],
+    setMeme = _useState2[1];
+  var _useState3 = (0, _react.useState)([]),
+    _useState4 = _slicedToArray(_useState3, 2),
+    allMemes = _useState4[0],
+    setAllMemes = _useState4[1];
+  (0, _react.useEffect)(function () {
+    fetch('https://api.imgflip.com/get_memes').then(function (res) {
+      return res.json();
+    }).then(function (data) {
+      return setAllMemes(data.data.memes);
+    });
+  }, []);
+  function getMemeImage() {
+    var randomNumber = Math.floor(Math.random() * allMemes.length);
+    var url = allMemes[randomNumber].url;
+    setMeme(function (prevMeme) {
+      return _objectSpread(_objectSpread({}, prevMeme), {}, {
+        randomImage: url
+      });
+    });
+  }
+  var handleChange = function handleChange(event) {
+    var _event$target = event.target,
+      name = _event$target.name,
+      value = _event$target.value;
+    setMeme(function (prevMeme) {
+      return _objectSpread(_objectSpread({}, prevMeme), {}, _defineProperty({}, name, value));
+    });
+  };
+  var onSubmit = function onSubmit(e) {
+    e.preventDefault();
+  };
+  return /*#__PURE__*/_react["default"].createElement("main", null, /*#__PURE__*/_react["default"].createElement("form", {
+    className: "form",
+    onSubmit: onSubmit
+  }, /*#__PURE__*/_react["default"].createElement("input", {
+    type: "text",
+    placeholder: "Top text",
+    className: "form--input",
+    name: "topText",
+    value: meme.topText,
+    onChange: handleChange
+  }), /*#__PURE__*/_react["default"].createElement("input", {
+    type: "text",
+    placeholder: "Bottom text",
+    className: "form--input",
+    name: "bottomText",
+    value: meme.bottomText,
+    onChange: handleChange
+  }), /*#__PURE__*/_react["default"].createElement("button", {
+    className: "form--button",
+    onClick: getMemeImage
+  }, "Get a new meme image")), /*#__PURE__*/_react["default"].createElement("div", {
+    className: "meme"
+  }, /*#__PURE__*/_react["default"].createElement("img", {
+    src: meme.randomImage,
+    className: "meme-image"
+  }), /*#__PURE__*/_react["default"].createElement("h2", {
+    className: "meme--text top"
+  }, meme.topText), /*#__PURE__*/_react["default"].createElement("h2", {
+    className: "meme--text bottom"
+  }, meme.bottomText)));
+}
 
 /***/ }),
 /* 8 */
@@ -514,21 +579,11 @@ throw new Error("Module build failed: SyntaxError: Unexpected token (17:3)\n\n\u
 "use strict";
 
 
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(5);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _App = __webpack_require__(4);
-
-var _App2 = _interopRequireDefault(_App);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById("root"));
+var _react = _interopRequireDefault(__webpack_require__(1));
+var _reactDom = _interopRequireDefault(__webpack_require__(5));
+var _App = _interopRequireDefault(__webpack_require__(4));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+_reactDom["default"].render( /*#__PURE__*/_react["default"].createElement(_App["default"], null), document.getElementById("root"));
 
 /***/ }),
 /* 9 */
